@@ -11,8 +11,11 @@
 
   **lambda_s3_life_cycle.yaml**
 
-    this is the core cloudformation template that sets up everything, creating IAM roles and permission, Lambda function, linking bucket and its key, configuring the 
-    lambda function metadata. without this template is important to note that the whole solution is null.
+    this is the core cloudformation template that sets up everything, creating IAM roles and permission, Lambda function, linking bucket and its key, configuring 
+    the lambda function metadata. without this template is important to note that the whole solution is null.
+
+    it is also important to note that permission boundary policy is already created in the accounts. if you want to use the templates, your own account might not 
+    need it or have it, so you can remove the line or just use comments so that CloudFormation won't demand it.
 
   **s3-lifecycle-lambda.py**
 
